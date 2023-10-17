@@ -1,7 +1,27 @@
-<html>
-<HEAD>
-    <TITLE> yeah </TITLE>
-</HEAD>
-<BODY>
-    <h1>Okay</h1>
-</BODY>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Diabetes Progress Prediction </title>
+</head>
+<body>
+    <div class="container">
+        <h2>Diabetes Progress Prediction</h2>
+        <form action="{{ url_for('predict')}}"method="post">
+            <input type="text" name="age" placeholder="age" required="required" /><br>
+              <input type="text" name="sex" placeholder="sex" required="required" /><br>
+              <input type="text" name="bmi" placeholder="body mass index" required="required" /><br>
+              <input type="text" name="bp" placeholder="average blood pressure" required="required" /><br>
+              <input type="text" name="s1" placeholder="total serum cholesterol" required="required" /><br>
+              <input type="text" name="s2" placeholder="low-density lipoproteins" required="required" /><br>
+              <input type="text" name="s3" placeholder="high-density lipoproteins" required="required" /><br>
+              <input type="text" name="s4" placeholder="total cholesterol" required="required" /><br>
+              <input type="text" name="s5" placeholder="possibly log of serum triglycerides level" required="required" /><br>
+              <input type="text" name="s6" placeholder="blood sugar level" required="required" /><br>
+             
+      
+              <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+          </form>
+</div>
+{{Text}}
+</body>
+</html>
