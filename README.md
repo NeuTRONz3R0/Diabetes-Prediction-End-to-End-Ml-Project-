@@ -8,15 +8,12 @@
 
 * create a Virtual environment
 ``````
-conda create -p venv python==3.7
+conda create -p venv python==3.x
 ``````
 * Install requirements.txt
 ``````
 pip install -r requirements.txt
 ``````
 ------------------------------------------------------------------
-# Access Colab Notebook- 
-- [colab](https://colab.research.google.com/drive/1MJ6QgZ8ktXJFudStEeMompPCcnf0KeKt?usp=sharing)\
-
-------------------------------------------------------------------
-# OUTPUT SHOTS- 
+## Access Colab Notebook- 
+* [colab](https://colab.research.google.com/drive/1MJ6QgZ8ktXJFudStEeMompPCcnf0KeKt?usp=sharing)
