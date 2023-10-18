@@ -1,27 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <title>Diabetes Progress Prediction </title>
+    <title>Diabetes Progress Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+
+        .login {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        .login input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 5px 0;
+        }
+
+        .login button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .login button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
+    <div class="login">
         <h2>Diabetes Progress Prediction</h2>
-        <form action="{{ url_for('predict')}}"method="post">
-            <input type="text" name="age" placeholder="age" required="required" /><br>
-              <input type="text" name="sex" placeholder="sex" required="required" /><br>
-              <input type="text" name="bmi" placeholder="body mass index" required="required" /><br>
-              <input type="text" name="bp" placeholder="average blood pressure" required="required" /><br>
-              <input type="text" name="s1" placeholder="total serum cholesterol" required="required" /><br>
-              <input type="text" name="s2" placeholder="low-density lipoproteins" required="required" /><br>
-              <input type="text" name="s3" placeholder="high-density lipoproteins" required="required" /><br>
-              <input type="text" name="s4" placeholder="total cholesterol" required="required" /><br>
-              <input type="text" name="s5" placeholder="possibly log of serum triglycerides level" required="required" /><br>
-              <input type="text" name="s6" placeholder="blood sugar level" required="required" /><br>
-             
-      
-              <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
-          </form>
-</div>
-{{Text}}
+        <form action="{{ url_for('predict') }}" method="post">
+            <input type="text" name="age" placeholder="Age" required="required"><br>
+            <input type="text" name="sex" placeholder="Sex" required="required"><br>
+            <input type="text" name="bmi" placeholder="Body Mass Index" required="required"><br>
+            <input type="text" name="bp" placeholder="Average Blood Pressure" required="required"><br>
+            <input type="text" name="s1" placeholder="Total Serum Cholesterol" required="required"><br>
+            <input type="text" name="s2" placeholder="Low-Density Lipoproteins" required="required"><br>
+            <input type="text" name="s3" placeholder="High-Density Lipoproteins" required="required"><br>
+            <input type="text" name="s4" placeholder="Total Cholesterol" required="required"><br>
+            <input type="text" name="s5" placeholder="Log of Serum Triglycerides Level" required="required"><br>
+            <input type="text" name="s6" placeholder="Blood Sugar Level" required="required"><br>
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+    {{prediction_text}}
 </body>
 </html>
